@@ -7,7 +7,7 @@ api.script_id = "0bbef10bf9e447aa0a04b9dac915d993"
 local sigmakey
 local KeyCheckingButtonSex
 local ApiStatusCode
-local KEY_FILE = "syncsaken.txt"
+local KEY_FILE = "syncsaken.key"
 local STATUS_MESSAGES = {
 	KEY_VALID = "Key valid! Loading script...",
 	KEY_HWID_LOCKED = "HWID Mismatch. Please get a new Key!.",
