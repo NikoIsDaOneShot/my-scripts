@@ -505,13 +505,13 @@ local function makeUI()
 		end)
 
 		Workinky.Activated:Connect(function()
-			setclipboard("https://discord.gg/j8QP4uW8aj")
+			setclipboard("https://ads.luarmor.net/get_key?for=Syncsaken-zdOfwDyVvncC")
 			StatusLabel.Text = "WorKink link copied to clipboard!"
 			MakeParticleSystsmeWHATUNITYPARTICLESYSTEM(Workinky.Parent)
 		end)
 
 		Linkvertis.Activated:Connect(function()
-			setclipboard("https://discord.gg/j8QP4uW8aj")
+			setclipboard("https://ads.luarmor.net/get_key?for=Linkvertise_Syncsaken-pcTRaLurPIKl")
 			StatusLabel.Text = "Linkvertise link copied to clipboard!"
 			MakeParticleSystsmeWHATUNITYPARTICLESYSTEM(Linkvertis.Parent)
 		end)
