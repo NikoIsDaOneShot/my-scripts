@@ -78,7 +78,7 @@ local function makeUI()
 	UICorner.Parent = Frame
 
 	local UIStroke = Instance.new("UIStroke")
-	UIStroke.Color = Color3.fromRGB(97, 255, 140)
+	UIStroke.Color = Color3.fromRGB(255, 97, 140)
 	UIStroke.Thickness = 2
 	UIStroke.Parent = Frame
 
@@ -165,7 +165,7 @@ local function makeUI()
 	KeyIcon.Size = UDim2.new(0, 48, 0, 48)
 	KeyIcon.ZIndex = 12
 	KeyIcon.Image = "rbxassetid://6031302931"
-	KeyIcon.ImageColor3 = Color3.fromRGB(230, 255, 180)
+	KeyIcon.ImageColor3 = Color3.fromRGB(230, 40, 180)
 	KeyIcon.Parent = Frame
 
 	local TextBox = Instance.new("TextBox")
@@ -175,7 +175,7 @@ local function makeUI()
 	TextBox.Text = ""
 	TextBox.PlaceholderText = "Enter Key Here"
 	TextBox.Parent = Frame
-	TextBox.BackgroundColor3 = Color3.fromRGB(60, 65, 60)
+	TextBox.BackgroundColor3 = Color3.fromRGB(65, 60, 61)
 	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextBox.BorderSizePixel = 0
 	TextBox.Font = Enum.Font.Gotham
@@ -203,7 +203,7 @@ local function makeUI()
 	LoadingBarContainer.Size = UDim2.new(0.85, 0, 0, 10)
 	LoadingBarContainer.Position = UDim2.new(0.5, 0, 1, -65)
 	LoadingBarContainer.AnchorPoint = Vector2.new(0.5, 0)
-	LoadingBarContainer.BackgroundColor3 = Color3.fromRGB(50, 55, 50)
+	LoadingBarContainer.BackgroundColor3 = Color3.fromRGB(55, 50, 50)
 	LoadingBarContainer.BorderSizePixel = 0
 	LoadingBarContainer.ZIndex = 12
 	LoadingBarContainer.Visible = false
@@ -215,7 +215,7 @@ local function makeUI()
 
 	local LoadingBarFill = Instance.new("Frame")
 	LoadingBarFill.Size = UDim2.new(0, 0, 1, 0)
-	LoadingBarFill.BackgroundColor3 = Color3.fromRGB(97, 255, 140)
+	LoadingBarFill.BackgroundColor3 = Color3.fromRGB(180, 97, 140)
 	LoadingBarFill.BorderSizePixel = 0
 	LoadingBarFill.ZIndex = 13
 	LoadingBarFill.Parent = LoadingBarContainer
@@ -230,7 +230,7 @@ local function makeUI()
 	LoadingText.Position = UDim2.new(0.5, 0, 1, -85)
 	LoadingText.AnchorPoint = Vector2.new(0.5, 0)
 	LoadingText.Text = "Loading..."
-	LoadingText.TextColor3 = Color3.fromRGB(97, 255, 140)
+	LoadingText.TextColor3 = Color3.fromRGB(180, 97, 140)
 	LoadingText.BackgroundTransparency = 1
 	LoadingText.TextSize = 14
 	LoadingText.Font = Enum.Font.GothamBold
@@ -332,7 +332,7 @@ local function makeUI()
 		PanelCorner.Parent = KeyProvidersPanel
 
 		local PanelStroke = Instance.new("UIStroke")
-		PanelStroke.Color = Color3.fromRGB(97, 255, 140)
+		PanelStroke.Color = Color3.fromRGB(255, 97, 140)
 		PanelStroke.Thickness = 2
 		PanelStroke.Parent = KeyProvidersPanel
 
@@ -362,7 +362,7 @@ local function makeUI()
 		local PanelGlow = Instance.new("ImageLabel")
 		PanelGlow.BackgroundTransparency = 1
 		PanelGlow.Image = "rbxassetid://7331400934"
-		PanelGlow.ImageColor3 = Color3.fromRGB(97, 255, 140)
+		PanelGlow.ImageColor3 = Color3.fromRGB(140, 42, 140)
 		PanelGlow.ImageTransparency = 0.7
 		PanelGlow.Size = UDim2.new(1.2, 0, 1.2, 0)
 		PanelGlow.Position = UDim2.new(-0.1, 0, -0.1, 0)
@@ -456,15 +456,15 @@ local function makeUI()
 		end
 
 		local Lootlibs =
-			MakeKeyProviderButton("LootLabs", "89429366953434", Color3.fromRGB(60, 65, 60), Color3.fromRGB(80, 85, 80))
+			MakeKeyProviderButton("LootLabs", "89429366953434", Color3.fromRGB(65, 60, 60), Color3.fromRGB(80, 80, 82))
 
 		local Workinky =
-			MakeKeyProviderButton("WorKink", "80731952209461", Color3.fromRGB(60, 65, 60), Color3.fromRGB(80, 85, 80))
+			MakeKeyProviderButton("WorKink", "80731952209461", Color3.fromRGB(62, 60, 62), Color3.fromRGB(82, 80, 80))
 
 		local Linkvertis = MakeKeyProviderButton(
 			"Linkvertise",
 			"91094527924039",
-			Color3.fromRGB(60, 65, 60),
+			Color3.fromRGB(60, 69, 60),
 			Color3.fromRGB(80, 85, 80)
 		)
 
@@ -603,7 +603,7 @@ local function makeUI()
 		end)
 	end
 
-	KeyCheckingButtonSex = MakeSigmaButton("Check Key", Color3.fromRGB(80, 180, 100), Color3.fromRGB(100, 200, 120))
+	KeyCheckingButtonSex = MakeSigmaButton("Check Key", Color3.fromRGB(180, 40, 158), Color3.fromRGB(200, 20, 180))
 	KeyCheckingButtonSex.Activated:Connect(function()
 		local key = TextBox.Text:gsub("%s+", "")
 		StatusLabel.Text = "Checking key..."
@@ -612,7 +612,7 @@ local function makeUI()
 
 		if status.code == "KEY_VALID" then
 			StatusLabel.Text = STATUS_MESSAGES.KEY_VALID
-			StatusLabel.TextColor3 = Color3.fromRGB(97, 255, 140)
+			StatusLabel.TextColor3 = Color3.fromRGB(180, 20, 140)
 			sigmakey = key
 			ApiStatusCode = status.code
 
@@ -705,7 +705,7 @@ if key and key ~= "" then
 			local GlowEffect = Instance.new("ImageLabel")
 			GlowEffect.BackgroundTransparency = 1
 			GlowEffect.Image = "rbxassetid://7331400934"
-			GlowEffect.ImageColor3 = Color3.fromRGB(97, 255, 140)
+			GlowEffect.ImageColor3 = Color3.fromRGB(255, 97, 140)
 			GlowEffect.ImageTransparency = 0.8
 			GlowEffect.Size = UDim2.new(1.2, 0, 1.2, 0)
 			GlowEffect.Position = UDim2.new(-0.1, 0, -0.1, 0)
@@ -716,7 +716,7 @@ if key and key ~= "" then
 			TitleLabel.Size = UDim2.new(1, -20, 0, 25)
 			TitleLabel.Position = UDim2.new(0, 10, 0, 10)
 			TitleLabel.Text = title
-			TitleLabel.TextColor3 = Color3.fromRGB(97, 255, 140)
+			TitleLabel.TextColor3 = Color3.fromRGB(255, 22, 180)
 			TitleLabel.BackgroundTransparency = 1
 			TitleLabel.TextSize = 16
 			TitleLabel.Font = Enum.Font.GothamBold
@@ -749,7 +749,7 @@ if key and key ~= "" then
 			return ScreenGui
 		end
 
-		MakeNotificatione("Welcome", "Script access valid! Loading script...", 3)
+		MakeNotificatione("Welcome", "Script access valid! Loading Syncsaken...", 3)
 		task.delay(0.5, function()
 			local timeLeftSecs = status.data.auth_expire - os.time()
 			local hours = math.floor(timeLeftSecs / 3600)
@@ -772,3 +772,4 @@ while ApiStatusCode ~= "KEY_VALID" do
 end
 script_key = sigmakey
 api.load_script()
+
