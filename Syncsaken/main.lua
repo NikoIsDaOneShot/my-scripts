@@ -173,7 +173,7 @@ local function makeUI()
 	TextBox.Position = UDim2.new(0.5, 0, 0, 130)
 	TextBox.AnchorPoint = Vector2.new(0.5, 0)
 	TextBox.Text = ""
-	TextBox.PlaceholderText = "Enter Key Here"
+	TextBox.PlaceholderText = "Enter key here"
 	TextBox.Parent = Frame
 	TextBox.BackgroundColor3 = Color3.fromRGB(65, 60, 61)
 	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -282,7 +282,7 @@ local function makeUI()
 		return Button
 	end
 
-	local GetFartButton = MakeSigmaButton("Get Key", Color3.fromRGB(60, 65, 60), Color3.fromRGB(80, 85, 80))
+	local GetFartButton = MakeSigmaButton("Get key", Color3.fromRGB(60, 65, 60), Color3.fromRGB(80, 85, 80))
 	GetFartButton.Activated:Connect(function()
 		GetFartButton.Active = false
 		GetFartButton.AutoButtonColor = false
@@ -455,11 +455,9 @@ local function makeUI()
 			return ButtonForgot
 		end
 
-		local Lootlibs =
-			MakeKeyProviderButton("LootLabs", "89429366953434", Color3.fromRGB(65, 60, 60), Color3.fromRGB(80, 80, 82))
-
+			
 		local Workinky =
-			MakeKeyProviderButton("WorKink", "80731952209461", Color3.fromRGB(62, 60, 62), Color3.fromRGB(82, 80, 80))
+			MakeKeyProviderButton("work.ink", "80731952209461", Color3.fromRGB(62, 60, 62), Color3.fromRGB(82, 80, 80))
 
 		local Linkvertis = MakeKeyProviderButton(
 			"Linkvertise",
@@ -471,7 +469,7 @@ local function makeUI()
 		local function MakeParticleSystsmeWHATUNITYPARTICLESYSTEM(button)
 			for i = 1, 6 do
 				local PARTICL = Instance.new("Frame")
-				PARTICL.BackgroundColor3 = Color3.fromRGB(97, 255, 140)
+				PARTICL.BackgroundColor3 = Color3.fromRGB(255, 97, 140)
 				PARTICL.BackgroundTransparency = 0.7
 				PARTICL.Size = UDim2.new(0, math.random(2, 4), 0, math.random(2, 4))
 				PARTICL.Position = UDim2.new(0.5, math.random(-50, 50), 0.5, math.random(-20, 20))
@@ -541,10 +539,10 @@ local function makeUI()
 
 			if progress < 0.3 then
 				LoadingText.Text = "Checking key..."
-			elseif progress < 0.6 then
-				LoadingText.Text = "Authenticating..."
 			elseif progress < 0.9 then
-				LoadingText.Text = "This totaly does something..."
+				LoadingText.Text = "Authenticating..."
+			elseif progress < 0.98 then
+				LoadingText.Text = "This totally does something..."
 			else
 				LoadingText.Text = "Authenticated."
 			end
@@ -580,7 +578,7 @@ local function makeUI()
 					:Create(
 						LoadingBarFill,
 						TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{ BackgroundColor3 = Color3.fromRGB(170, 255, 200) }
+						{ BackgroundColor3 = Color3.fromRGB(255, 80, 200) }
 					)
 					:Play()
 
@@ -603,7 +601,7 @@ local function makeUI()
 		end)
 	end
 
-	KeyCheckingButtonSex = MakeSigmaButton("Check Key", Color3.fromRGB(180, 40, 158), Color3.fromRGB(200, 20, 180))
+	KeyCheckingButtonSex = MakeSigmaButton("Check key", Color3.fromRGB(180, 40, 158), Color3.fromRGB(200, 20, 180))
 	KeyCheckingButtonSex.Activated:Connect(function()
 		local key = TextBox.Text:gsub("%s+", "")
 		StatusLabel.Text = "Checking key..."
@@ -772,4 +770,5 @@ while ApiStatusCode ~= "KEY_VALID" do
 end
 script_key = sigmakey
 api.load_script()
+
 
