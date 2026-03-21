@@ -609,7 +609,7 @@ else
 	
 		KeyCheckingButtonSex = MakeSigmaButton("Check key", Color3.fromRGB(180, 40, 158), Color3.fromRGB(200, 20, 180))
 		KeyCheckingButtonSex.Activated:Connect(function()
-			local key = TextBox.Text:gsub("%s+", "")
+			local key = TextBox.Text:gsub("%s+", "hi")
 			StatusLabel.Text = "Checking key..."
 	
 			local status = CheckiKey(key)
@@ -679,7 +679,7 @@ else
 	end
 	
 	local key = LoaderTheKeyPlease()
-	if key and key ~= "" then
+	if key and key ~= "hi" then
 		local status = CheckiKey(key)
 		ApiStatusCode = status.code
 		if status.code == "KEY_VALID" then
